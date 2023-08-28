@@ -1,0 +1,88 @@
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn-light{
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: absolute;
+    right: 7%;
+}
+
+.btn-light1{
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: absolute;
+    right: 3%;
+}
+/* CSS PARA LA PLANTILLA LISTA*/
+/* CSS PARA LA PLANTILLA LISTA*/
+
+
+.product-container {
+    display: flex; /* Utiliza Flexbox para mostrar los productos en una fila */
+    flex-wrap: wrap; /* Permite que los productos se envuelvan a la siguiente línea si no caben en el ancho de la pantalla */
+    justify-content: flex-start; /* Espacio entre los productos */
+}
+
+.product-item {
+    flex: 0 0 calc(25% - 10px); /* Ajusta el ancho de cada producto para que haya cuatro productos por fila */
+    margin-bottom: 20px; /* Espacio entre las filas de productos */
+    text-align: center; /* Centra el contenido horizontalmente */
+    box-sizing: border-box; /* Evita que los márgenes afecten el ancho total de los productos */
+    padding: 10px; /* Espacio interno para los productos */
+}
+
+/* CSS PARA LA PLANTILLA DETALLE*/
+/* CSS PARA LA PLANTILLA DETALLE*/
+
+
+.product-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    gap: 20px; /* Espacio entre la imagen y la información */
+}
+
+.product-image img {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    margin: 50px;
+    margin-top: 20px;
+}
+
+.product-info {
+    flex-grow: 1; /* Hace que la información del producto ocupe todo el espacio disponible */
+}
+
+.product-info h2 {
+    font-size: 24px; /* Tamaño del nombre del producto */
+    margin-top: 30px; /* Elimina el margen superior predeterminado */
+    margin-left: 50px;
+}
+
+.product-info p {
+    margin-bottom: 5px; /* Espacio entre los elementos de información */
+    margin-top: 30px; /* Elimina el margen superior predeterminado */
+    margin-left: 50px;
+}
+
+.product-info .btn {
+    margin-top: 10px; /* Espacio entre el contenido y el botón "Volver" */
+    margin-left: 50px;
+}
+
+
