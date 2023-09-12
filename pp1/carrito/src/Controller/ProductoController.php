@@ -8,15 +8,19 @@ use App\Negocio\Almacen;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\Persistence\ManagerRegistry;
+use App\Entity\Producto;
+
 
 class ProductoController extends AbstractController
 {
     /**
      * @Route("/", name="listar_productos")
      */
-    public function listarProductos(Almacen $almacen): Response
+    public function listarProductos(ManagerRegistry  $registry): Response
     {
-        $productos = $almacen->findAll();
+        $productoRepository = $registry->getRepository(Producto::class);
+        $productos = $productoRepository->findAll();
 
         return $this->render('lista.html.twig', [
             'productos' => $productos,
